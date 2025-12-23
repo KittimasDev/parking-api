@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  parking_api:
+    container_name: parking_api
+    build: .
+    ports:
+      - '8080:8080'
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - ./public:/usr/src/app/public
+      - ./uploads:/usr/src/app/uploads
+    command: npm run start:dev
