@@ -33,9 +33,5 @@ async function bootstrap() {
 
   const port = process.env.PORT ?? 8000;
   await app.listen(port, '0.0.0.0');
-
-  
-  console.log(`API: http://localhost:${port}/api`);
-  console.log(`Swagger: http://localhost:${port}/api/swagger`);
 }
 bootstrap();
